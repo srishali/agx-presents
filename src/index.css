@@ -1,0 +1,220 @@
+@import "tailwindcss";
+
+:root {
+  --c-p: #007a33;
+  --c-p-dark: #005524;
+  --c-p-deep: #003114;
+  --c-p-ink: #001d0c;
+  --c-p-soft: #80bd99;
+  --c-p-light: #d6eadf;
+  --c-p-wash: #edf6f1;
+  --c-s: #d69a2d;
+  --c-s-dark: #966c1f;
+  --c-s-soft: #e9c587;
+  --c-s-light: #f7ebd5;
+  --c-s-wash: #fcf6ec;
+  --f-head: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --f-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --fs: 1;
+  --r: 10px;
+}
+
+@theme inline {
+  --color-p: var(--c-p);
+  --color-p-dark: var(--c-p-dark);
+  --color-p-deep: var(--c-p-deep);
+  --color-p-ink: var(--c-p-ink);
+  --color-p-soft: var(--c-p-soft);
+  --color-p-light: var(--c-p-light);
+  --color-p-wash: var(--c-p-wash);
+  --color-s: var(--c-s);
+  --color-s-dark: var(--c-s-dark);
+  --color-s-soft: var(--c-s-soft);
+  --color-s-light: var(--c-s-light);
+  --color-s-wash: var(--c-s-wash);
+  --color-ink: #17201c;
+  --color-mute: #5b6661;
+  --color-line: #e1e5df;
+  --color-paper: #f5f6f2;
+  --font-head: var(--f-head);
+  --font-body: var(--f-body);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--f-body);
+  -webkit-font-smoothing: antialiased;
+  background: #0b1410;
+}
+
+.font-head {
+  letter-spacing: -0.01em;
+}
+
+/* Radius driven by settings */
+.rc {
+  border-radius: var(--r);
+}
+.rc-sm {
+  border-radius: calc(var(--r) * 0.55);
+}
+.rc-lg {
+  border-radius: calc(var(--r) * 1.6);
+}
+
+/* Type scale driven by settings (--fs) */
+.fs-8 { font-size: calc(8px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-9 { font-size: calc(9px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-9h { font-size: calc(9.5px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-10 { font-size: calc(10px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-10h { font-size: calc(10.5px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-11 { font-size: calc(11px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-11h { font-size: calc(11.5px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-12 { font-size: calc(12px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-12h { font-size: calc(12.5px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-13 { font-size: calc(13px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-14 { font-size: calc(14px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-15 { font-size: calc(15px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-16 { font-size: calc(16px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-18 { font-size: calc(18px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-20 { font-size: calc(20px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-22 { font-size: calc(22px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-24 { font-size: calc(24px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-26 { font-size: calc(26px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-28 { font-size: calc(28px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-30 { font-size: calc(30px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-32 { font-size: calc(32px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-36 { font-size: calc(36px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-40 { font-size: calc(40px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-44 { font-size: calc(44px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-48 { font-size: calc(48px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-54 { font-size: calc(54px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-60 { font-size: calc(60px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+.fs-72 { font-size: calc(72px * var(--fs) * var(--fsc-w, 1) * var(--fsc-h, 1)); }
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.thin-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.thin-scroll::-webkit-scrollbar-thumb {
+  background: rgba(127, 127, 127, 0.35);
+  border-radius: 8px;
+}
+
+.recharts-wrapper,
+.recharts-surface {
+  outline: none !important;
+}
+
+/* ---------- Responsive deck canvas (container queries) ---------- */
+.deck-frame {
+  container-type: size;
+}
+.deck-canvas {
+  --fsc-w: 1;
+  --fsc-h: 1;
+}
+@container (max-width: 1150px) { .deck-canvas { --fsc-w: 0.95; } }
+@container (max-width: 1000px) { .deck-canvas { --fsc-w: 0.9; } }
+@container (max-width: 880px)  { .deck-canvas { --fsc-w: 0.82; } }
+@container (max-width: 740px)  { .deck-canvas { --fsc-w: 0.74; } }
+@container (max-width: 600px)  { .deck-canvas { --fsc-w: 0.66; } }
+@container (max-width: 470px)  { .deck-canvas { --fsc-w: 0.58; } }
+@container (max-height: 620px) { .deck-canvas { --fsc-h: 0.94; } }
+@container (max-height: 500px) { .deck-canvas { --fsc-h: 0.86; } }
+
+.deck-canvas .recharts-wrapper { transform-origin: center; }
+
+/* wide-but-short pages: keep two columns, scale charts to their cards */
+@container (max-width: 1150px) {
+  .resp-chain { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 3cqh 32px !important; align-items: start; }
+  .resp-chain > div { display: block !important; }
+  .resp-arrow { display: none !important; }
+  .stage-box { width: 100% !important; }
+  .gantt-head, .gantt-row { grid-template-columns: 180px 1fr !important; }
+  .deck-canvas .recharts-wrapper { transform: scale(0.86); }
+}
+/* process flow diagrams scale down on narrow pages */
+@container (max-width: 1150px) {
+  .proc-chain { transform: scale(0.82); transform-origin: top center; }
+}
+@container (max-width: 1000px) {
+  .proc-chain { transform: scale(0.66); }
+}
+/* narrow pages: two-column sections stack vertically */
+@container (max-width: 1000px) {
+  .resp-2  { grid-template-columns: 1fr !important; grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) !important; }
+  .resp-2p { grid-template-columns: 1fr !important; grid-template-rows: 34cqh minmax(0, 1fr) !important; }
+  .resp-2 > *, .resp-2p > * { min-height: 0; }
+  .resp-6  { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  .resp-toc { flex-direction: column !important; }
+  .resp-toc > :first-child { width: 100% !important; height: 34cqh !important; }
+  .resp-close { flex-direction: column !important; gap: 3cqh !important; }
+  .resp-close > :last-child { width: 100% !important; }
+  .resp-coverstats { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .resp-coverstats > div { width: auto !important; }
+}
+@container (max-width: 820px) {
+  .resp-2p { grid-template-rows: 30cqh minmax(0, 1fr) !important; }
+  .resp-chain { grid-template-columns: 1fr !important; }
+  .deck-canvas .recharts-wrapper { transform: scale(0.85); }
+}
+@container (max-width: 620px) {
+  .resp-4 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .resp-4 > * { min-height: 0; }
+  .deck-canvas .recharts-wrapper { transform: scale(0.66); }
+}
+@container (max-width: 480px) {
+  .deck-canvas .recharts-wrapper { transform: scale(0.5); }
+}
+
+/* ---------- Print: every slide becomes one page at the selected size ---------- */
+.print-root {
+  display: none;
+}
+
+@media print {
+  html,
+  body,
+  #root {
+    height: auto !important;
+    overflow: visible !important;
+    background: #fff !important;
+  }
+  .screen-root,
+  .print-hide {
+    display: none !important;
+  }
+  .print-root {
+    display: block !important;
+  }
+  .print-page {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    break-after: page;
+    page-break-after: always;
+  }
+  .print-page:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+  .print-stage {
+    position: absolute;
+    inset: var(--pdf-margin, 0mm);
+  }
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
